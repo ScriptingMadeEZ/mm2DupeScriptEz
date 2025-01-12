@@ -116,12 +116,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Ihaveash0rtnamefordis
    end,
 })
 
-local Button = FunTab:CreateButton({
-   Name = "xhub",
-   Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Au0yX/Community/main/XhubMM2"))() 
-   end,
-})
 
 
 
