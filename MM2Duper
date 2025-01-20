@@ -46,7 +46,7 @@ Rayfield:Notify({
 
 local Button = MainTab:CreateButton({
    Name = "start duper system",
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptingMadeEZ/mm2DupeScriptEz/refs/heads/main/loading%20screen%20(ty%20arko!)"))();
+
    end,
 })
 
